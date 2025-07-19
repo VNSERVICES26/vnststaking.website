@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNST Staking Dashboard</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="assets/logo.png" alt="VNST Logo" class="logo" />
+    <div class="wallet-section">
+      <span id="walletAddress">Connect Wallet</span>
+      <button id="connectWallet" class="wallet-connect-btn">Connect</button>
+    </div>
+  </nav>
+
+  <main class="content-section">
+    <h2>VNST Staking Dashboard</h2>
+
+    <div class="cards-container">
+      <div class="card">
+        <h3>Global Stats</h3>
+        <div class="stat-item"><span id="totalUsers">0</span><span>Total Users</span></div>
+        <div class="stat-item"><span id="totalStake">0</span><span>Total Staked VNST</span></div>
+        <div class="stat-item"><span id="totalWithdraw">0</span><span>Total VNT Withdraw</span></div>
+      </div>
+
+      <div class="card">
+        <h3>My Dashboard</h3>
+        <div class="stat-item"><span id="userVNST">0</span><span>Your VNST Balance</span></div>
+        <div class="stat-item"><span id="myStake">0</span><span>Your Total Stake</span></div>
+        <div class="stat-item"><span id="stakingLimit">0</span><span>Staking Limit</span></div>
+        <div class="stat-item"><span id="teamSize">0</span><span>Team Size</span></div>
+        <div class="stat-item"><span id="teamStake">0</span><span>Team Total Stake</span></div>
+      </div>
+
+      <div class="card">
+        <h3>My Rewards</h3>
+        <div class="stat-item"><span id="directIncome">0</span><span>Direct Income VNST</span></div>
+        <div class="stat-item"><span id="stakingReward">0</span><span>Staking Reward VNT</span></div>
+        <div class="stat-item"><span id="levelIncome">0</span><span>2-5 Level Income USDT</span></div>
+        <div class="stat-item"><span id="roiIncome">0</span><span>1-5 Level ROI of ROI USDT</span></div>
+        <div class="stat-item"><span id="withdrawLimit">0</span><span>Withdrawable Reward</span></div>
+        <button id="claimAllBtn" class="btn">Claim All</button>
+      </div>
+    </div>
+
+    <div class="stake-form">
+      <input type="number" id="stakeAmount" placeholder="Enter VNST Amount to Stake" />
+      <input type="text" id="referralAddress" placeholder="Enter your referral address (0x...)">
+      <button id="approveMaxBtn">Approve Max</button>
+      <button id="stakeBtn">Stake</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>VNetwork Services &copy; 2025 | VNST Staking Platform</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
